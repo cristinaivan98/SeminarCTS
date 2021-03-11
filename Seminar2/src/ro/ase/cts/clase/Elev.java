@@ -21,6 +21,9 @@ public class Elev extends Aplicant{
 	}
 	
 	
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
 	public  float getSumaFinantata() {
 		return sumaFinantare;
 	}
@@ -29,9 +32,12 @@ public class Elev extends Aplicant{
 	}
 	@Override
 	public String toString() {
-		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+//		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
+//				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
+//				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+		StringBuilder stringBuilder=new StringBuilder();
+		stringBuilder.append("Elev:");
+		return stringBuilder.toString();
 	}
 	
 	public Elev() {

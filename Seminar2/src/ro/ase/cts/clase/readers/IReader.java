@@ -31,4 +31,5 @@ public abstract  class IReader {
 		aplicant.setVectorDenumiri(nr, vect);
 		//return aplicant;
 	}
+	
 }

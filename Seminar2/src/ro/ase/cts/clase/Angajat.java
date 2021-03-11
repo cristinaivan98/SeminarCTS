@@ -38,9 +38,10 @@ public class Angajat extends Aplicant{
 	
 	@Override
 	public String toString() {
-		return "Angajat: Nume=" + nume + ", Prenume=" + prenume
-				+ ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		StringBuilder stringBuilder=new StringBuilder();
+		stringBuilder.append("Angajat:").append(super.toString()).append("Ocupatie=")
+		.append(",salariu").append(salariu).append(",salariu:").append(salariu);
+		return "Angajat:"  + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
 	}
 	
 	
