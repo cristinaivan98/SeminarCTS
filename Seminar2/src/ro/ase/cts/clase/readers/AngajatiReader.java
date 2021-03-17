@@ -29,7 +29,6 @@ public class AngajatiReader extends IReader {
 			String ocupatie = input2.next();
 			angajat.setSalariu(salariu);
 			angajat.setOcupatie(ocupatie);
-			//Angajat a = new Angajat(anga, prenume, varsta, punctaj, nr, vect, salariu, ocupatie);
 			angajati.add(angajat);
 		}
 		input2.close();

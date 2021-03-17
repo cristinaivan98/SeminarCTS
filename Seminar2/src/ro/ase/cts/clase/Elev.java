@@ -7,15 +7,10 @@ public class Elev extends Aplicant{
 	private String tutore;
 	private static float sumaFinantare=30;
 	
-	public int getClasa() {
-		return clasa;
+	public void setClasa(int clasa) {
+		this.clasa = clasa;
 	}
-	public void setClasa(int i) {
-		this.clasa = i;
-	}
-	public String getTutore() {
-		return tutore;
-	}
+
 	public void setTutore(String tutore) {
 		this.tutore = tutore;
 	}
@@ -32,11 +27,9 @@ public class Elev extends Aplicant{
 	}
 	@Override
 	public String toString() {
-//		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-//				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
-//				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+
 		StringBuilder stringBuilder=new StringBuilder();
-		stringBuilder.append("Elev:");
+		stringBuilder.append("Elev:").append(super.toString()).append(", clasa: ").append(clasa).append(" ,tutore: ").append(tutore);
 		return stringBuilder.toString();
 	}
 	

@@ -22,14 +22,12 @@ public abstract  class IReader {
 		String[] vect = new String[nr];
 		for (int i = 0; i < nr; i++)
 			vect[i] = input.next();
-		//clasa Aplicant e abstracta deci nu poate fi instantiata
 		aplicant.setNume(nume);
 		aplicant.setPrenume(prenume);
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
 		aplicant.setNr_proiecte(nr);
 		aplicant.setVectorDenumiri(nr, vect);
-		//return aplicant;
 	}
 	
 }

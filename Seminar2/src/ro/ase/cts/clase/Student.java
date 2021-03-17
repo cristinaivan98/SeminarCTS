@@ -7,15 +7,11 @@ public class Student extends Aplicant {
 	protected int an_studii;
 	private static float sumaFinantare=20;
 	
-	public String getFacultate() {
-		return facultate;
-	}
+
 	public void setFacultate(String facultate) {
 		this.facultate = facultate;
 	}
-	public int getAn_studii() {
-		return an_studii;
-	}
+
 	public void setAn_studii(int an_studii) {
 		this.an_studii = an_studii;
 	}
@@ -42,7 +38,7 @@ public class Student extends Aplicant {
 	}
 	@Override
 	public String toString() {
-		//return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + an_studii ;
+		
 		StringBuilder stringBuilder=new StringBuilder();
 		stringBuilder.append("Student:").append(super.toString())
 		.append("Facultate:").append(facultate);

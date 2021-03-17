@@ -28,9 +28,6 @@ public class StudentsReader extends IReader {
 			String facultate = (input.next()).toString();
 			student.setAn_studii(an_studii);
 			student.setFacultate(facultate);
-			
-			
-			//Student s = new Student(nume, prenume, varsta, punctaj, nr, vect, facultate, an_studii);
 			studenti.add(student);
 		}
 		input.close();

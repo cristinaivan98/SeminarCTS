@@ -6,20 +6,19 @@ public class Angajat extends Aplicant{
 	private String ocupatie;
 	private int salariu;
 	private static float sumaFinantare=10;
-	public String getOcupatie() {
-		return ocupatie;
-	}
 	public void setOcupatie(String ocupatie) {
 		this.ocupatie = ocupatie;
 	}
-	public int getSalariu() {
-		return salariu;
-	}
+
 	public void setSalariu(int salariu) {
 		this.salariu = salariu;
 	}
 	
 	public  float getSumaFinantata() {
+		return sumaFinantare;
+	}
+	
+	public static float getSumaFinantare() {
 		return sumaFinantare;
 	}
 	public static void setSumaFinantare(float sumaFinantare) {
@@ -39,9 +38,9 @@ public class Angajat extends Aplicant{
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder=new StringBuilder();
-		stringBuilder.append("Angajat:").append(super.toString()).append("Ocupatie=")
-		.append(",salariu").append(salariu).append(",salariu:").append(salariu);
-		return "Angajat:"  + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		stringBuilder.append("Angajat:").append(super.toString()).append("Ocupatie=").append("Ocupatie: ")
+		.append(",salariu").append(salariu);
+		return stringBuilder.toString();
 	}
 	
 	

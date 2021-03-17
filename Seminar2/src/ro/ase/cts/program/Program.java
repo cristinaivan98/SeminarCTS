@@ -8,7 +8,9 @@ import ro.ase.cts.clase.readers.AngajatiReader;
 import ro.ase.cts.clase.readers.IReader;
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
+import ro.ase.cts.clase.Elev;
 import ro.ase.cts.clase.Proiect;
+import ro.ase.cts.clase.Student;
 
 public class Program {
 	
@@ -19,9 +21,9 @@ public class Program {
 	}
 
 	public static void main(String[] args) {
-//		System.out.println("Suma finantata angajati"+Angajat.getSumaFinantata());
-//		System.out.println("Suma finantata elevi"+Elev.getSumaFinantata());
-//		System.out.println("Suma finantata studenti"+Student.getSumaFinantata());
+		System.out.println("Suma finantata angajati "+Angajat.getSumaFinantare());
+		System.out.println("Suma finantata elevi "+Elev.getSumaFinantare());
+		System.out.println("Suma finantata studenti "+Student.getSumaFinantare());
 		
 		List<Aplicant> listaAplicanti;
 		Proiect proiect=new Proiect(81);
