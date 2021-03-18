@@ -1,5 +1,6 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.clase.Medic;
 import ro.ase.cts.clase.Presedinte;
 import ro.ase.cts.clase.PresedinteLazy;
 
@@ -19,5 +20,13 @@ public class Program {
 	PresedinteLazy presedinteLazy2=PresedinteLazy.getInstance("PresedinteLazy22", 50, 1);
 	System.out.println(presedinteLazy1.toString());
 	System.out.println(presedinteLazy2.toString());
+	
+	Medic medic1=Medic.getInstance("Popescu Maria", 43, "Universitar");
+	Medic medic2=Medic.getInstance("Rotaru Ramona", 30, "Fundeni");
+	System.out.println(medic1.toString());
+	System.out.println(medic2.toString());
+	
+	
+	
 	}
 }
