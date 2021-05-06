@@ -1,11 +1,11 @@
 package ro.ase.cts.clase;
 
-public class Card implements ModalitatePlata {
+public class Card implements IPlata {
 
 	@Override
-	public void plateste(double sumaPlatita) {
+	public void plateste(float suma) {
 		// TODO Auto-generated method stub
-		System.out.println("Trebuile platita suma de : "+sumaPlatita);
+		System.out.println("A fost realizata plata cu cardul pentu suma de  : "+suma);
 		
 	}
 	

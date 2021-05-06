@@ -4,7 +4,7 @@ import ro.ase.cts.clase.Card;
 import ro.ase.cts.clase.Cash;
 import ro.ase.cts.clase.Client;
 
-public class Main {
+public class MainStrategy {
 	public static void main(String[] args) {
 		Client client=new Client("Cristina");
 		client.setModPlata(new Card());

@@ -1,11 +1,11 @@
 package ro.ase.cts.clase;
 
-public class Cash implements ModalitatePlata {
+public class Cash implements IPlata {
 
 	@Override
-	public void plateste(double sumaPlatita) {
+	public void plateste(float suma) {
 		// TODO Auto-generated method stub
-		System.out.println("Suma cash: "+sumaPlatita);
+		System.out.println("A fost realizata plata cash in valoare de  : "+suma);
 		
 	}
 
