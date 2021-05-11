@@ -1,0 +1,2 @@
+public class Clasa1 {
+}
