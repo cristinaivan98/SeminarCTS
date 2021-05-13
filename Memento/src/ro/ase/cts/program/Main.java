@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args){
         Meci meci=new Meci("Gazda","Oaspeti",200,189,10,5);
         ManagerMemento managerMemento=new ManagerMemento();
-        managerMemento.adaugaMemento(meci.);
+
         meci.setNrSpectatori(100);
-        managerMemento.adaugaMemento(meci.);
+
         System.out.println(meci.toString());
         managerMemento.adaugaMemento(meci.creareMemento());
 
