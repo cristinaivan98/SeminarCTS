@@ -18,8 +18,9 @@ public class StudentTests {
     @Test
     public void testConstructorFaraParam(){
         Student student=new Student();
-        assertNotNull(student.getNote());
-        assertNotNull(student.getNume());
+        assertNotNull("Atributul note nu a fost initializat",student.getNote());
+        assertNotNull("Atributul nume nu a fost initializat",student.getNume());
+
     }
     @Test
     public void testAdaugaNota(){
@@ -69,4 +70,34 @@ public class StudentTests {
         student.adaugaNota(8);
         assertEquals(false,student.areRestante());
     }
+    @Test
+    public void testGetNotaException(){
+        Student student=new Student();
+        student.adaugaNota(5);
+        student.adaugaNota(7);
+        try{
+            student.getNota(5);
+            fail("nu trebuia sa ajunga aici, met nu arunca exceptie");
+        }catch (IndexOutOfBoundsException e){
+
+        }
+        catch(Exception e){
+            fail();
+        }
+    }
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetNotaExceptionJunit4(){
+        Student student=new Student();
+        student.adaugaNota(5);
+        student.adaugaNota(7);
+        student.getNota(5);
+
+    }
+//    @Test
+//    public void testGetNotaExceptionJunit5(){
+//        Student student=new Student();
+//        student.adaugaNota(5);
+//        student.adaugaNota(7);
+//        assertThrows(IndexOutOfBoundsException.class,(()->{student.getNota(5);}));
+//    }
 }
