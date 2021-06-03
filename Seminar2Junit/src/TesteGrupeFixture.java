@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 public class TesteGrupeFixture {
     private Grupa grupa;
@@ -20,6 +21,8 @@ public class TesteGrupeFixture {
         }
     }
     @Test(timeout = 500)
+
+    @Category({getPromovabilitateCategory.class,TesteUrgenteCategory.class})
     public void testGetPromovabilitatePerformance(){
         {
 

@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.*;
 
@@ -11,6 +12,7 @@ public class GrupaTestMock {
         assertEquals(1,grupa.getStudenti().size());
     }
     @Test
+    @Category(getPromovabilitateCategory.class)
     public void testGetPromovabilitate(){
         IStudent stundent=new StubStudent();
         Grupa grupa=new Grupa(1081);
@@ -20,6 +22,7 @@ public class GrupaTestMock {
 
     }
     @Test
+    @Category(getPromovabilitateCategory.class)
     public void testGetPromovabilitateFakeStudent(){
         Grupa grupa=new Grupa(1081);
         for (int i=0;i<8;i++){

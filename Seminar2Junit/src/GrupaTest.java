@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
@@ -7,29 +8,33 @@ import static org.junit.Assert.*;
 public class GrupaTest {
 
     @Test
-
+    @Category(getConstructorGrupaCategory.class)
     public void testConstructorNrGrupaCorect(){
         Grupa grupa=new Grupa(1081);
         assertEquals(1081,grupa.getNrGrupa());
 
     }
     @Test
+    @Category(getConstructorGrupaCategory.class)
     public void testConstructorExista(){
         Grupa grupa=new Grupa(1081);
         assertNotNull(grupa.getStudenti());
     }
     @Test
+    @Category(getConstructorGrupaCategory.class)
     public void testConstructorLimitaInferioara(){
         Grupa grupa=new Grupa(1000);
         assertEquals(1000,grupa.getNrGrupa());
     }
 
     @Test
+    @Category(getConstructorGrupaCategory.class)
     public void testConstructorLimitaSuperioara(){
         Grupa grupa=new Grupa(1100);
         assertEquals(1100,grupa.getNrGrupa());
     }
     @Test(expected = IllegalArgumentException.class)
+    @Category(getConstructorGrupaCategory.class)
     public void testExceptionConstructorInferior(){
         Grupa grupa=new Grupa(900);
 
@@ -45,6 +50,7 @@ public class GrupaTest {
     }
 
     @Test
+    @Category(getPromovabilitateCategory.class)
     public void testPromovabilitateRight(){
         Grupa grupa=new Grupa(1081);
         for(int i=0;i<10;i++){
@@ -64,6 +70,7 @@ public class GrupaTest {
 
     }
     @Test
+    @Category(getPromovabilitateCategory.class)
     public void testGetPRomovabilitateInferioara(){
         Grupa grupa=new Grupa(1001);
         for(int i=0;i<5;i++){
@@ -75,6 +82,7 @@ public class GrupaTest {
         assertEquals(0,grupa.getPromovabilitate(),0.1);
     }
     @Test
+    @Category({getPromovabilitateCategory.class,TesteUrgenteCategory.class})
     public void testGetPromovabilitateLimitaSuperioara(){
         Grupa grupa=new Grupa(1100);
         for(int i=0;i<10;i++){
@@ -87,12 +95,14 @@ public class GrupaTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
+    @Category(getPromovabilitateCategory.class)
     public void testGetPromovabilitateErrorCondition(){
         Grupa grupa=new Grupa(1050);
        grupa.getPromovabilitate();
     }
     //CORECT
     @Test
+    @Category(getPromovabilitateCategory.class)
     public void testGetPromovabilitateCArdinality1(){
         Grupa grupa=new Grupa(1081);
         IStudent student=new Student();
